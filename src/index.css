@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111522;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+  color: #B59876;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slick-dots li button:before {
+  color: #B59876;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #B59876;
+  font-size: 32px;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
