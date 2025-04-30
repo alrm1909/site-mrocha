@@ -25,7 +25,7 @@ function Header() {
         <a href="#" title="Facebook">
           <FaFacebook color="#fff" size={20} />
         </a>
-        <a href="#" title="LinkedIn">
+        <a href="https://linktr.ee/mrochaseg?fbclid=PAZXh0bgNhZW0CMTEAAadNqpGjm7UPDYv8DOEwhdJcE5FJvbyWEWQKOZklOMVCiojbvY4WjLP4ml80gQ_aem_ikc9njyFuKmbZ0SRdswdXg" title="LinkedIn">
           <FaLinkedin color="#fff" size={20} />
         </a>
       </div>
@@ -38,7 +38,7 @@ function Header() {
         color: '#ffffff',
         fontFamily: 'Open Sans'
       }}>
-        Protegendo o que realmente importa.
+        O custo do cuidado é sempre menor do que o custo do reparo!
       </p>
 
       <nav style={{

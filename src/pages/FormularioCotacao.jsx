@@ -5,7 +5,7 @@ function FormularioCotacao() {
   const [telefone, setTelefone] = useState('');
   const [mensagem, setMensagem] = useState('');
 
-  const numeroWhatsapp = '5548998548554'; // ✅ Substitua pelo número real
+  const numeroWhatsapp = '5548992072727'; // ✅ Substitua pelo número real
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ function FormularioCotacao() {
       backgroundColor: '#f9f9f9',
       fontFamily: 'Open Sans'
     }}>
-      <h2 style={{ textAlign: 'center', color: '#B89B72', fontSize: '1.8rem', marginBottom: '2rem', fontFamily: 'Open Sans' }}>
+      <h2 style={{ textAlign: 'center', color: '#B89B72', fontSize: '2.0rem', marginBottom: '2rem', fontFamily: 'Open Sans' }}>
         Solicite sua Cotação
       </h2>
       <form onSubmit={handleSubmit} style={{

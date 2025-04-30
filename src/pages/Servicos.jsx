@@ -16,7 +16,7 @@ function Servicos() {
         color: '#B59876',
         fontFamily: 'Open Sans',
         marginBottom: '2rem',
-        fontSize: '1.8rem'
+        fontSize: '2.0rem'
       }}>
         Seguros e Assistências
       </h2>

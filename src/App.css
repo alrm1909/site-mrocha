@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+@media (max-width: 768px) {
+  .slick-slide > div {
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #sobre {
+    flex-direction: column;
+  }
+
+  #sobre img {
+    width: 100%;
+    height: auto;
+  }
+
+  #sobre div {
+    max-width: 90vw; /* adapta texto ao tamanho da tela */
+    padding: 1rem;
+  }
+}

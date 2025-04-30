@@ -2,31 +2,52 @@ import React from 'react';
 
 function Rodape() {
   return (
-    <footer style={{
-      backgroundColor: '#111522',
-      color: '#ffffff',
-      padding: '2rem 1rem',
-      textAlign: 'center',
-      fontFamily: 'Open Sans',
-      fontSize: '0.9rem'
-    }}>
-      <p>CNPJ: 12.345.678/0001-99</p>
-      <p>
-        <a href="#termos" style={linkStyle}>Termos de Uso</a> |{' '}
-        <a href="#privacidade" style={linkStyle}>Política de Privacidade</a> |{' '}
-        <a href="#contato" style={linkStyle}>Fale Conosco</a>
+    <footer
+      style={{
+        backgroundColor: '#111522',
+        color: '#ffffff',
+        padding: '2rem 1rem',
+        textAlign: 'center',
+        fontFamily: 'Open Sans',
+        fontSize: '0.9rem',
+      }}
+    >
+      {/* CNPJ */}
+      <p style={{ margin: '0 0 0.5rem' }}>CNPJ: 58.857.153/0001-30</p>
+
+      {/* WhatsApp + SUSEP */}
+      <p style={{ margin: '0 0 0.5rem' }}>
+        <a
+          href="https://wa.me/5548992072727"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: '#ffffff',
+            textDecoration: 'none',
+            marginRight: '8px'
+          }}
+        >
+          <img
+            src="/whatsapp-icon.png"
+            alt="WhatsApp"
+            style={{
+              width: '16px',
+              height: '16px',
+              verticalAlign: 'middle',
+              marginRight: '6px'
+            }}
+          />
+          (48) 99207-2727
+        </a>
+        | SUSEP: 252166899
       </p>
+
+      {/* Direitos autorais */}
       <p style={{ marginTop: '1rem', fontSize: '0.8rem' }}>
         &copy; {new Date().getFullYear()} M Rocha Corretora de Seguros. Todos os direitos reservados.
       </p>
     </footer>
   );
 }
-
-const linkStyle = {
-  color: '#ffffff',
-  textDecoration: 'underline',
-  margin: '0 0.3rem'
-};
 
 export default Rodape;

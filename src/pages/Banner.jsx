@@ -23,14 +23,26 @@ function Banner() {
   const imagens = [banner1, banner2, banner3];
 
   return (
-    <div style={{ width: '100%', maxHeight: '500px', overflow: 'hidden' }}>
+    <div
+      style={{
+        width: '100%',
+        height: '500px', // altura desejada do banner
+        overflow: 'hidden',
+      }}
+    >
       <Slider {...settings}>
         {imagens.map((img, index) => (
           <div key={index}>
             <img
               src={img}
               alt={`Banner ${index + 1}`}
-              style={{ width: '100%', height: '500px', objectFit: 'cover' }}
+              style={{
+                width: '100%',
+                height: '500px', // força altura fixa para a imagem também
+                objectFit: 'cover',
+                display: 'block',
+                borderRadius: 0,
+              }}
             />
           </div>
         ))}

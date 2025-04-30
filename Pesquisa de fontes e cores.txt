@@ -1,0 +1,36 @@
+🔄 Para trocar a fonte:
+Vá até https://fonts.google.com
+
+Escolha uma fonte (ex: "Montserrat", "Poppins", "Lora"...)
+
+Clique na fonte e copie o link de uso (exemplo):
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+
+Exemplo usando 3 fontes no mesmo link:
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+Cole esse link dentro do <head> no seu index.html
+
+Use o nome da fonte onde quiser:
+
+<h1 style={{ fontFamily: 'Lora', fontSize: '2rem' }}>
+
+Alterar a cor de fundo do Header:
+Está definida aqui:
+
+<header style={{ backgroundColor: '#b59876', ... }}>
+
+Como ver prévias de fontes e cores:
+Para fontes:
+Use https://fonts.google.com
+
+Digite “M Rocha Corretora de Seguros” no campo de prévia
+
+Para cores:
+Use https://coolors.co
+
+Explore combinações e veja contraste com o texto
+
+

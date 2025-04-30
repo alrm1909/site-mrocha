@@ -34,7 +34,7 @@ function PaginaServico() {
       }}>
         <h2 style={{
           color: '#B59876',
-          fontFamily: 'Playfair Display',
+          fontFamily: 'Open Sans',
           fontSize: '2.4rem',
           marginBottom: '1rem'
         }}>
@@ -58,7 +58,7 @@ function PaginaServico() {
         ))}
 
         <a
-          href={`https://wa.me/5547999999999?text=${encodeURIComponent(`Olá, gostaria de uma cotação sobre: ${servico.titulo}`)}`}
+          href={`https://wa.me/5548992072727?text=${encodeURIComponent(`Olá, gostaria de uma cotação sobre: ${servico.titulo}`)}`}
           target="_blank"
           rel="noopener noreferrer"
           style={{
