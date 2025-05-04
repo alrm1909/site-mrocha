@@ -9,6 +9,7 @@ import FormularioCotacao from './pages/FormularioCotacao';
 import Rodape from './components/Rodape';
 import ScrollToTop from './components/ScrollToTop';
 import PaginaServico from './pages/PaginaServico';
+import TituloSecao from './components/TituloSecao';
 
 function App() {
   return (
@@ -20,8 +21,11 @@ function App() {
         <Route path="/" element={
           <>
             <Banner />
+            <TituloSecao texto="Quem sou eu?" />
             <Sobre />
+            <TituloSecao texto="Seguros e Assistências" />
             <Servicos />
+            <TituloSecao texto="Solicite sua cotação" />
             <FormularioCotacao />
             <Rodape />
           </>

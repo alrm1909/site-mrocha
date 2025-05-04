@@ -26,7 +26,7 @@ function Banner() {
     <div
       style={{
         width: '100%',
-        height: '500px', // altura desejada do banner
+        height: '400px', // altura desejada do banner
         overflow: 'hidden',
       }}
     >
