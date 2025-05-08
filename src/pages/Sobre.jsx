@@ -49,7 +49,7 @@ function Sobre() {
               height: '100%',
               objectFit: 'cover',
               display: 'block',
-	      borderRadius: 0,
+	            borderRadius: 0,
             }}
           />
         </div>

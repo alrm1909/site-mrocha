@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
 import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
@@ -7,7 +7,30 @@ function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
   const [mostrarSubmenu, setMostrarSubmenu] = useState(false);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const toggleMenu = () => setMenuAberto(!menuAberto);
+
+  const irParaSecao = (id) => {
+    if (location.pathname === '/') {
+      const elemento = document.getElementById(id);
+      if (elemento) {
+        elemento.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const check = setInterval(() => {
+          const el = document.getElementById(id);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+            clearInterval(check);
+          }
+        }, 100);
+      }, 300);
+    }
+  };
 
   const servicos = [
     { titulo: 'Seguro Automóvel', slug: 'seguro-automovel' },
@@ -102,15 +125,27 @@ function Header() {
         }}
       >
         <Link to="/" style={{ color: '#ffffff', textDecoration: 'none' }}>Início</Link>
-        <a href="#sobre" style={{ color: '#ffffff', textDecoration: 'none' }}>Sobre</a>
 
-        {/* Menu Serviços com dropdown */}
+        {/* Sobre */}
+        <a
+          onClick={() => irParaSecao('sobre')}
+          style={{ color: '#ffffff', textDecoration: 'none', cursor: 'pointer' }}
+        >
+          Sobre
+        </a>
+
+        {/* Produtos / Serviços */}
         <div
           style={{ position: 'relative' }}
           onMouseEnter={() => setMostrarSubmenu(true)}
           onMouseLeave={() => setMostrarSubmenu(false)}
         >
-          <a href="#servicos" style={{ color: '#ffffff', textDecoration: 'none' }}>Serviços</a>
+          <a
+            onClick={() => irParaSecao('servicos')}
+            style={{ color: '#ffffff', textDecoration: 'none', cursor: 'pointer' }}
+          >
+            Produtos
+          </a>
 
           {mostrarSubmenu && (
             <div
@@ -118,7 +153,7 @@ function Header() {
                 position: 'absolute',
                 top: '100%',
                 left: '50%',
-                transform: 'translateX(-50%)', // ✅ centraliza
+                transform: 'translateX(-50%)',
                 backgroundColor: 'rgba(255,255,255,0.85)',
                 color: '#000',
                 borderRadius: '4px',
@@ -131,6 +166,10 @@ function Header() {
                 <Link
                   key={slug}
                   to={`/servicos/${slug}`}
+                  onClick={() => {
+                    setMostrarSubmenu(false);
+                    setMenuAberto(false);
+                  }}
                   style={{
                     display: 'block',
                     padding: '0.75rem 1rem',
@@ -146,7 +185,13 @@ function Header() {
           )}
         </div>
 
-        <a href="#contato" style={{ color: '#ffffff', textDecoration: 'none' }}>Contato</a>
+        {/* Contato */}
+        <a
+          onClick={() => irParaSecao('contato')}
+          style={{ color: '#ffffff', textDecoration: 'none', cursor: 'pointer' }}
+        >
+          Contato
+        </a>
       </nav>
 
       {/* Estilos responsivos */}
